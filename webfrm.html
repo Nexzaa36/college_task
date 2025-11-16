@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.0/dist/full.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Dashboard</h1>
+    <button id="menu-btn" class="lg:hidden text-2xl">☰</button>
+  </header>
+
+  <div class="flex">
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="hidden lg:block bg-blue-600 text-white w-64 p-4 space-y-4">
+      <a class="block p-2 rounded hover:bg-blue-700" href="#">Home</a>
+      <a class="block p-2 rounded hover:bg-blue-700" href="#">Analytics</a>
+      <a class="block p-2 rounded hover:bg-blue-700" href="#">Settings</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 p-6 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white p-4 shadow rounded">Card 1</div>
+      <div class="bg-white p-4 shadow rounded">Card 2</div>
+      <div class="bg-white p-4 shadow rounded">Card 3</div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("menu-btn").onclick = () => {
+      document.getElementById("sidebar").classList.toggle("hidden");
+    };
+  </script>
+
+</body>
+</html>
